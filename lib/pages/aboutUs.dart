@@ -24,7 +24,7 @@ class _AboutUsState extends State<AboutUs> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: ToolsUtilities.mainColor,
-                    image: DecorationImage(image: NetworkImage(ToolsUtilities.contactUsHeaderImage),fit: BoxFit.cover),
+                    image: DecorationImage(image: NetworkImage(ToolsUtilities.infoHeaderImage),fit: BoxFit.cover),
 
                   ),
                   child: Padding(

@@ -19,17 +19,13 @@ class _ContactUsPageState extends State<ContactUsPage> {
     return Scaffold(
       backgroundColor: ToolsUtilities.whiteColor,
       appBar: AppBar(
-        title: Text('My Favourites Recipe '),
+        title: Text('Contact Us '),
         backgroundColor: ToolsUtilities.mainColor,
         centerTitle: true,
       ),
-      body: ListView.builder(
-        itemCount: 5,
-          itemBuilder: (context,index){
-
-          return _contactUSCard();
-
-      }),
+      body:SingleChildScrollView(
+        child: _contactUSCard(),
+      ),
     );
   }
 
@@ -60,6 +56,18 @@ class _ContactUsPageState extends State<ContactUsPage> {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+
+        Container(
+          height: 100,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: NetworkImage(ToolsUtilities.contactUsHeaderImage),
+              fit: BoxFit.cover,
+            ),
+            borderRadius: BorderRadius.circular(0),
+          ),
+        ),
+
 
         //name Of our Company or Brand
         Padding(
