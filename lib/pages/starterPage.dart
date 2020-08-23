@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:full_web_converter/pages/aboutUs.dart';
 import 'package:full_web_converter/pages/categoriesPage.dart';
 import 'package:full_web_converter/pages/discoverypage.dart';
-import 'package:full_web_converter/pages/favouritesPage.dart';
-import 'package:full_web_converter/pages/recipesPage.dart';
+import 'package:full_web_converter/pages/contactUsPage.dart';
+import 'package:full_web_converter/pages/allPostsPage.dart';
 import 'package:full_web_converter/utilites/toolsUtilities.dart';
 
 class StarterPage extends StatefulWidget {
@@ -23,8 +23,8 @@ class _StarterPageState extends State<StarterPage> {
       AboutUs(),
       CategoriesPage(),
       DiscoveryPage(),
-      RecipesPage(),
-      FavouritesPage()
+      AllPostsPage(),
+      ContactUsPage()
     ];
 
     return Scaffold(
@@ -36,8 +36,8 @@ class _StarterPageState extends State<StarterPage> {
           Icon(Icons.info,color: ToolsUtilities.whiteColor, size: 20),
           Icon(Icons.calendar_view_day,color: ToolsUtilities.whiteColor, size: 20),
           Icon(Icons.whatshot,color: ToolsUtilities.whiteColor, size: 20),
-          Icon(Icons.receipt,color: ToolsUtilities.whiteColor, size: 20),
-          Icon(Icons.favorite,color: ToolsUtilities.whiteColor, size: 20),
+          Icon(Icons.layers,color: ToolsUtilities.whiteColor, size: 20),
+          Icon(Icons.email,color: ToolsUtilities.whiteColor, size: 20),
         ],
         color: ToolsUtilities.mainColor,
         buttonBackgroundColor: ToolsUtilities.mainColor,

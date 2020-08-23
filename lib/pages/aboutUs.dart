@@ -9,11 +9,6 @@ class AboutUs extends StatefulWidget {
 
 class _AboutUsState extends State<AboutUs> {
 
-  //The controls of Text Editing
-  TextEditingController nameTextControl = TextEditingController();
-  TextEditingController phoneTextControl= TextEditingController();
-  TextEditingController messageTitleTextControl= TextEditingController();
-  TextEditingController contentTextControl= TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +42,7 @@ class _AboutUsState extends State<AboutUs> {
                   child: Center(
                     child: Padding(
                       padding: const EdgeInsets.only(top: 100.0, right: 10, left: 10),
-                      child:Text("About Our Recipe Community ",style: TextStyle(color: ToolsUtilities.whiteColor,fontWeight: FontWeight.bold,fontSize: 30),),
+                      child:Text("About Our Wooo Watches ",style: TextStyle(color: ToolsUtilities.whiteColor,fontWeight: FontWeight.bold,fontSize: 30),),
                     ),
                   ),
                 ),
@@ -57,8 +52,29 @@ class _AboutUsState extends State<AboutUs> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top:20,bottom:8.0,left: 10),
+                    child: Text('Follow Us ',style: TextStyle(color:ToolsUtilities.mainColor,fontSize: 15,fontWeight: FontWeight.bold),textAlign:TextAlign.start,),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(bottom:18.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(FontAwesomeIcons.facebook,color: ToolsUtilities.secondColor,),
+                        Icon(FontAwesomeIcons.twitter,color: ToolsUtilities.secondColor,),
+                        Icon(FontAwesomeIcons.instagram,color: ToolsUtilities.secondColor,),
+                        Icon(FontAwesomeIcons.pinterest,color: ToolsUtilities.secondColor,),
+                        Icon(FontAwesomeIcons.youtube,color: ToolsUtilities.secondColor,),
+                        Icon(FontAwesomeIcons.globe,color: ToolsUtilities.secondColor,),
+                        Icon(FontAwesomeIcons.snapchat,color: ToolsUtilities.secondColor,),
+
+                      ],
+                    ),
+                  ),
                   _aboutUsCard(),
-                  _contactUSCard(),
                 ],
               ),
             ),
@@ -121,6 +137,7 @@ class _AboutUsState extends State<AboutUs> {
           child: Card(
             child: Column(
               children: [
+
                 Container(
                   height: 150,
                   width: 400,
@@ -137,6 +154,7 @@ class _AboutUsState extends State<AboutUs> {
                   child: Text(ToolsUtilities.infoParagraph,style: TextStyle(color:ToolsUtilities.secondColor,fontSize: 15,),textAlign: TextAlign.justify,
                   ),
                 ),
+
               ],
             ),
           ),
@@ -146,89 +164,8 @@ class _AboutUsState extends State<AboutUs> {
     );
   }
 
-  Widget _contactUSCard(){
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-
-        //name Of our Company or Brand
-        Padding(
-          padding: const EdgeInsets.only(left:8.0,top:10),
-          child: Text('Contact Us ',style: TextStyle(color:ToolsUtilities.mainColor,fontSize: 20,fontWeight: FontWeight.bold),textAlign:TextAlign.start,),
-        ),
-        custumTextField('Enter Your Name',nameTextControl,1),
-        custumTextField('Enter Your Phone Number',phoneTextControl,1),
-        custumTextField('Enter Your Message Title',messageTitleTextControl,1),
-        custumTextField('Enter Your Message Content',contentTextControl,4),
-
-        Padding(
-          padding: const EdgeInsets.all(18.0),
-          child: Container(
-            alignment: Alignment.bottomRight,
-            width: MediaQuery.of(context).size.width * 0.65,
-            child: RaisedButton(onPressed: (){},
-              color: ToolsUtilities.mainColor,
-              elevation: 5,
-              child: FlatButton.icon(onPressed: (){
 
 
-              }, icon: Icon(Icons.email,color: ToolsUtilities.whiteColor,), label: Text('Send Via Email',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: ToolsUtilities.whiteColor),)),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(25.0),
-              ),
 
 
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(bottom:8.0,left: 10),
-          child: Text('Follow Us ',style: TextStyle(color:ToolsUtilities.mainColor,fontSize: 15,fontWeight: FontWeight.bold),textAlign:TextAlign.start,),
-        ),
-
-        Padding(
-          padding: const EdgeInsets.only(bottom:18.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-           Icon(FontAwesomeIcons.facebook,color: ToolsUtilities.secondColor,),
-           Icon(FontAwesomeIcons.twitter,color: ToolsUtilities.secondColor,),
-           Icon(FontAwesomeIcons.instagram,color: ToolsUtilities.secondColor,),
-           Icon(FontAwesomeIcons.pinterest,color: ToolsUtilities.secondColor,),
-           Icon(FontAwesomeIcons.youtube,color: ToolsUtilities.secondColor,),
-           Icon(FontAwesomeIcons.globe,color: ToolsUtilities.secondColor,),
-           Icon(FontAwesomeIcons.snapchat,color: ToolsUtilities.secondColor,),
-
-            ],
-          ),
-        ),
-
-      ],
-    );
-  }
-
-
-  Widget custumTextField(String hitName,TextEditingController textEditingControl,int maxLine){
-    return Padding(
-      padding: const EdgeInsets.only(right:30,left: 30,top: 8),
-      child: Container(
-          child: TextField(
-            maxLines: maxLine,
-            controller:textEditingControl,
-            decoration: InputDecoration(
-              hoverColor: ToolsUtilities.secondColor,
-              focusColor: ToolsUtilities.secondColor,
-              focusedBorder:OutlineInputBorder(
-                borderSide: BorderSide(
-                    color: ToolsUtilities.mainColor
-                ),
-
-              ),
-              labelText: hitName,labelStyle: TextStyle(color: ToolsUtilities.secondColor),
-            ),
-          )),
-    );
-  }
 }

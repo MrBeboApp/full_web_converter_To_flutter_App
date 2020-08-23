@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:full_web_converter/pages/recipesPage.dart';
+import 'package:full_web_converter/pages/allPostsPage.dart';
 import 'package:full_web_converter/utilites/toolsUtilities.dart';
 
 class CategoriesPage extends StatefulWidget {
@@ -65,7 +65,12 @@ class _CategoriesPageState extends State<CategoriesPage> {
                       child: GridView.count(crossAxisCount: 3,
                       shrinkWrap: true,
                         children: [
-                          _categoryCard('Main',FontAwesomeIcons.accessibleIcon,0),
+                          _categoryCard(ToolsUtilities.categoriesNames[0],ToolsUtilities.categoriesIcons[0],0),
+                          _categoryCard(ToolsUtilities.categoriesNames[1],ToolsUtilities.categoriesIcons[1],1),
+                          _categoryCard(ToolsUtilities.categoriesNames[2],ToolsUtilities.categoriesIcons[2],2),
+                          _categoryCard(ToolsUtilities.categoriesNames[3],ToolsUtilities.categoriesIcons[3],3),
+                          _categoryCard(ToolsUtilities.categoriesNames[4],ToolsUtilities.categoriesIcons[4],4),
+                          _categoryCard(ToolsUtilities.categoriesNames[5],ToolsUtilities.categoriesIcons[5],5),
 
                         ],
                       ),
@@ -85,7 +90,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
 
   Widget _categoryCard(String categoryName,IconData icon,int index) {
     return Padding(
-      padding: const EdgeInsets.all(4.0),
+      padding: const EdgeInsets.all(8.0),
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -93,7 +98,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
             height: 130,
             width:110,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(100),
               color: (index % 2) == 0?ToolsUtilities.mainColor:ToolsUtilities.mainColor.withOpacity(0.8),
 
             ),
@@ -104,14 +109,15 @@ class _CategoriesPageState extends State<CategoriesPage> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => RecipesPage()));
+                      builder: (context) => AllPostsPage()));
 
             },
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Icon(icon,color: ToolsUtilities.whiteColor,size: 30,),
+                Icon(icon,color: ToolsUtilities.whiteColor,size: 40,),
+                SizedBox(height: 5,),
                 Text(
                   categoryName,
                   style: TextStyle(

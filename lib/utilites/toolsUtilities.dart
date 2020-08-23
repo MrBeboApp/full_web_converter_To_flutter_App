@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ToolsUtilities {
 
@@ -28,6 +29,24 @@ class ToolsUtilities {
     'https://images.unsplash.com/photo-1545576300-c7744d48aead?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
     'https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
 
+  ];
+
+  static List categoriesNames = [
+    "Rolex",
+    "Apple",
+    "Samsung",
+    "Garmin",
+    "Extra ",
+    "Smart ",
+  ];
+
+  static List categoriesIcons = [
+ FontAwesomeIcons.stopwatch,
+ FontAwesomeIcons.appStore,
+ FontAwesomeIcons.googlePlay,
+ FontAwesomeIcons.sortAmountDownAlt,
+ FontAwesomeIcons.walking,
+ FontAwesomeIcons.ravelry,
   ];
   static String discoveryImageHeader = 'https://images.unsplash.com/photo-1532667449560-72a95c8d381b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80';
   static String contactUsHeaderImage = 'https://images.unsplash.com/photo-1455849318743-b2233052fcff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80';
