@@ -9,6 +9,17 @@ class ToolsUtilities {
   static final redColor = Color(0xffdc3636);
   static final mainColor = Color(0xff22222c);
 
+  static final homePageUrl = "https://codecanyon.net/";
+  static final videoPageUrl = "https://www.youtube.com/coodesapp";
+  static final allPageUrl = "https://codecanyon.net/category/all";
+  static final firstCategoryPageUrl = "https://codecanyon.net/category/mobile";
+  static final secondCategoryPageUrl = "https://codecanyon.net/category/php-scripts";
+  static final thirdCategoryPageUrl = "https://codecanyon.net/category/plugins";
+  static final fourthCategoryPageUrl = "https://codecanyon.net/category/javascript";
+  static final fifthCategoryPageUrl = "https://codecanyon.net/category/wordpress/ecommerce/woocommerce";
+  static final sixthCategoryPageUrl = "https://videohive.net/?auto_signin=true&_ga=2.212782612.104259428.1598206012-1321168733.1593072656";
+
+
   static List imageFeaturedUrls = [
     'https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
     'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
@@ -38,6 +49,17 @@ class ToolsUtilities {
     "Imac",
     "imac Pro ",
     "Accessories ",
+  ];
+
+  static List categoriesUrls = [
+    firstCategoryPageUrl,
+    secondCategoryPageUrl,
+    thirdCategoryPageUrl,
+    fourthCategoryPageUrl,
+    fifthCategoryPageUrl,
+    sixthCategoryPageUrl,
+
+
   ];
 
   static List categoriesIcons = [

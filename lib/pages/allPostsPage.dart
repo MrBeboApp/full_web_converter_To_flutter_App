@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:full_web_converter/utilites/toolsUtilities.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 final webViewKey = GlobalKey<WebViewContainerState>();
@@ -14,7 +15,9 @@ class AllPostsPageState extends State<AllPostsPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("WebView example"),
+        title: Text("All New Posts"),
+        backgroundColor: ToolsUtilities.mainColor,
+        centerTitle: false,
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.refresh),
@@ -46,7 +49,7 @@ class WebViewContainerState extends State<WebViewContainer> {
       onWebViewCreated: (controller) {
         _webViewController = controller;
       },
-      initialUrl: "https://alltimeoffers.com",
+      initialUrl:ToolsUtilities.allPageUrl,
       javascriptMode: JavascriptMode.unrestricted,
     );
   }
