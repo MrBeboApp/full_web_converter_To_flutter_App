@@ -32,21 +32,21 @@ class ToolsUtilities {
   ];
 
   static List categoriesNames = [
-    "Rolex",
-    "Apple",
-    "Samsung",
-    "Garmin",
-    "Extra ",
-    "Smart ",
+    "Mac",
+    "Iphone",
+    "Macbook Pro",
+    "Imac",
+    "imac Pro ",
+    "Accessories ",
   ];
 
   static List categoriesIcons = [
- FontAwesomeIcons.stopwatch,
- FontAwesomeIcons.appStore,
- FontAwesomeIcons.googlePlay,
- FontAwesomeIcons.sortAmountDownAlt,
- FontAwesomeIcons.walking,
- FontAwesomeIcons.ravelry,
+ FontAwesomeIcons.laptopCode,
+ FontAwesomeIcons.mobile,
+ FontAwesomeIcons.laptop,
+ FontAwesomeIcons.tv,
+ FontAwesomeIcons.streetView,
+ FontAwesomeIcons.accessibleIcon,
   ];
   static String discoveryImageHeader = 'https://images.unsplash.com/photo-1532667449560-72a95c8d381b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80';
   static String contactUsHeaderImage = 'https://images.unsplash.com/photo-1511370235399-1802cae1d32f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60';

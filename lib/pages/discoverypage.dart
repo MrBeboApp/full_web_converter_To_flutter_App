@@ -1,5 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:full_web_converter/utilites/toolsUtilities.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+
+final Completer<WebViewController> _webViewcontroller = Completer<WebViewController>();
 
 class DiscoveryPage extends StatefulWidget {
   @override
@@ -7,6 +12,7 @@ class DiscoveryPage extends StatefulWidget {
 }
 class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProviderStateMixin  {
   TabController _controller;
+
 
   @override
   void initState() {
@@ -22,7 +28,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
             Stack(
               children: [
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.30,
+                  height: MediaQuery.of(context).size.height * 0.21,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: ToolsUtilities.mainColor,
@@ -34,7 +40,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                   ),
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.30,
+                  height: MediaQuery.of(context).size.height * 0.21,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: ToolsUtilities.secondColor.withOpacity(0.4),
@@ -78,20 +84,25 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
             ),
             Container(
               color: ToolsUtilities.mainColor,
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: MediaQuery.of(context).size.height * 0.8,
               child: new TabBarView(
                 controller: _controller,
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: SingleChildScrollView(
-                      child: Text("Home page")
+                    child: Container(
+                      child: WebView(
+                        initialUrl: "https://Apple.com/",
+                        javascriptMode: JavascriptMode.unrestricted,
+
+                      ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: SingleChildScrollView(
-                      child: Text("youtube Channel"),
+                    child: WebView(
+                      initialUrl: "https://www.youtube.com/c/CoodesApp/videos",
+                      javascriptMode: JavascriptMode.unrestricted,
                     ),
                   ),
                 ],
@@ -119,4 +130,5 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
       ),
     );
   }
+
 }

@@ -1,133 +1,57 @@
 import 'package:flutter/material.dart';
-import 'package:full_web_converter/utilites/toolsUtilities.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+
+final webViewKey = GlobalKey<WebViewContainerState>();
 
 class AllPostsPage extends StatefulWidget {
   @override
-  _AllPostsPageState createState() => _AllPostsPageState();
+  AllPostsPageState createState() => AllPostsPageState();
 }
 
-class _AllPostsPageState extends State<AllPostsPage> {
+class AllPostsPageState extends State<AllPostsPage> {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      backgroundColor: ToolsUtilities.whiteColor,
       appBar: AppBar(
-        title: Text('All Posts'),
-        backgroundColor: ToolsUtilities.mainColor,
-        centerTitle: true,
-
+        title: Text("WebView example"),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.refresh),
+            onPressed: () {
+              // using currentState with question mark to ensure it's not null
+              webViewKey.currentState?.reloadWebView();
+            },
+          )
+        ],
       ),
-      body: Container(
+      body: WebViewContainer(key: webViewKey),
+    );
+  }
+}
 
+class WebViewContainer extends StatefulWidget {
+  WebViewContainer({Key key}) : super(key: key);
 
-        child: ListView(
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(topRight: Radius.circular(10),topLeft: Radius.circular(10)),
-                      color: ToolsUtilities.whiteColor
+  @override
+  WebViewContainerState createState() => WebViewContainerState();
+}
 
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(top:18.0),
-                    child: GridView.count(crossAxisCount: 2,
-                      shrinkWrap: true,
-                      physics: ScrollPhysics(),
-                      children: [
-                        _recipeCard(ToolsUtilities.imageFeaturedUrls[0]),
-                        _recipeCard(ToolsUtilities.imageFeaturedUrls[1]),
-                        _recipeCard(ToolsUtilities.imageFeaturedUrls[2]),
-                        _recipeCard(ToolsUtilities.imageFeaturedUrls[3]),
-                        _recipeCard(ToolsUtilities.imageFeaturedUrls[4]),
-                        _recipeCard(ToolsUtilities.imageFeaturedUrls[5]),
-                        _recipeCard(ToolsUtilities.imageFeaturedUrls[6]),
-                        _recipeCard(ToolsUtilities.imageFeaturedUrls[0]),
+class WebViewContainerState extends State<WebViewContainer> {
+  WebViewController _webViewController;
 
-                      ],
-                    ),
-                  )
-              ),
-            ),
-
-          ],
-        ),
-      ),
+  @override
+  Widget build(BuildContext context) {
+    return WebView(
+      onWebViewCreated: (controller) {
+        _webViewController = controller;
+      },
+      initialUrl: "https://alltimeoffers.com",
+      javascriptMode: JavascriptMode.unrestricted,
     );
   }
 
-  Widget _recipeCard(String imageUrl) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        decoration: BoxDecoration(
-          color: ToolsUtilities.secondColor,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Stack(
-          alignment: Alignment.bottomCenter,
-          children: <Widget>[
-            Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(imageUrl),
-                  fit: BoxFit.cover,
-                ),
-                borderRadius: BorderRadius.circular(20),
-              ),
-            ),
-            Container(
-              height: MediaQuery.of(context).size.height * 0.3,
-              width: MediaQuery.of(context).size.width * 0.60,
-              decoration: BoxDecoration(
-                color: ToolsUtilities.secondColor.withOpacity(0.4),
-                borderRadius: BorderRadius.circular(20),
-              ),
-            ),
-
-            Padding(
-              padding: const EdgeInsets.all(4.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  Text(
-                    "The Recipe Title",
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: ToolsUtilities.whiteColor,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 5),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-
-                      Padding(
-                        padding: const EdgeInsets.only(left:8.0),
-                        child: Text(
-                          "Category",
-                          style: TextStyle(
-                            fontSize: 15,
-                            color: ToolsUtilities.whiteColor,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right:4.0),
-                        child: Icon(Icons.favorite,color: ToolsUtilities.whiteColor,size: 20,),
-                      ),
-                    ],
-                  ),
-
-                ],
-              ),
-            )
-          ],
-        ),
-      ),
-    );
+  void reloadWebView() {
+    _webViewController?.reload();
   }
 }
