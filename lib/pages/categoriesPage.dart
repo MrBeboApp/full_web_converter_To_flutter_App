@@ -13,7 +13,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ToolsUtilities.redColor,
+      backgroundColor: ToolsUtilities.whiteColor,
       body: Stack(
         children: <Widget>[
 

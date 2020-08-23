@@ -7,9 +7,9 @@ import 'package:full_web_converter/utilites/toolsUtilities.dart';
 
 
 List<OnBoardingModel> dataUtilits = [
-  OnBoardingModel('More than 1000 Food   Recipes','assets/images/2.png'),
-  OnBoardingModel('High quality Video       Recipes','assets/images/1.png'),
-  OnBoardingModel('Every Recipe Has New    Video','assets/images/3.png'),
+  OnBoardingModel('All content will show from web as App','assets/images/2.png'),
+  OnBoardingModel('Convert any website to app for ios and android','assets/images/1.png'),
+  OnBoardingModel('Any Website Update will show immediately ','assets/images/3.png'),
 
 ];
 
@@ -166,11 +166,11 @@ class _OnBoardingState extends State<OnBoarding> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
-            width: 20,
-            height: 20,
+            width: 30,
+            height: 10,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: (index == currentIndex ) ? ToolsUtilities.secondColor : ToolsUtilities.whiteColor,
+              color: (index == currentIndex ) ? ToolsUtilities.redColor : ToolsUtilities.whiteColor,
 
             ),
           ),
