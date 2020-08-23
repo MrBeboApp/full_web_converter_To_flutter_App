@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:full_web_converter/pages/recipesPage.dart';
 import 'package:full_web_converter/utilites/toolsUtilities.dart';
 
@@ -64,15 +65,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
                       child: GridView.count(crossAxisCount: 3,
                       shrinkWrap: true,
                         children: [
-                          _categoryCard('Main',"assets/images/11.png",0),
-                          _categoryCard('breakfast',"assets/images/5.png",1),
-                          _categoryCard('Sweets',"assets/images/6.png",2),
-                          _categoryCard('Fast Foods',"assets/images/7.png",3),
-                          _categoryCard('Diet',"assets/images/8.png",4),
-                          _categoryCard('Coffee',"assets/images/9.png",5),
-                          _categoryCard('Salads',"assets/images/10.png",6),
-                          _categoryCard('Pasta',"assets/images/4.png",7),
-                          _categoryCard('Asian',"assets/images/12.png",8),
+                          _categoryCard('Main',FontAwesomeIcons.accessibleIcon,0),
 
                         ],
                       ),
@@ -90,7 +83,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
     );
   }
 
-  Widget _categoryCard(String categoryName,String imageAssetsName,int index) {
+  Widget _categoryCard(String categoryName,IconData icon,int index) {
     return Padding(
       padding: const EdgeInsets.all(4.0),
       child: Stack(
@@ -118,7 +111,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(imageAssetsName,height: 80,width: 80,fit: BoxFit.cover,),
+                Icon(icon,color: ToolsUtilities.whiteColor,size: 30,),
                 Text(
                   categoryName,
                   style: TextStyle(
