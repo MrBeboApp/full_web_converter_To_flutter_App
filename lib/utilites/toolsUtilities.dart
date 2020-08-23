@@ -7,7 +7,7 @@ class ToolsUtilities {
   static final whiteColor = Color(0xffffffff);
   static final secondColor = Color(0xff463e46);
   static final redColor = Color(0xffdc3636);
-  static final mainColor = Color(0xff22222c);
+  static final mainColor = Color(0xff2b478b);
 
   static final homePageUrl = "https://codecanyon.net/";
   static final videoPageUrl = "https://www.youtube.com/coodesapp";

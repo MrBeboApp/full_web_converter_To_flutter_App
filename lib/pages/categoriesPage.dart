@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:full_web_converter/pages/allPostsPage.dart';
+import 'package:full_web_converter/pages/singleCategoryPage.dart';
 import 'package:full_web_converter/utilites/toolsUtilities.dart';
 
 class CategoriesPage extends StatefulWidget {
@@ -61,12 +62,12 @@ class _CategoriesPageState extends State<CategoriesPage> {
                 child: GridView.count(crossAxisCount: 2,
                 shrinkWrap: true,
                   children: [
-                    _categoryCard(ToolsUtilities.categoriesNames[0],ToolsUtilities.categoriesIcons[0],0),
-                    _categoryCard(ToolsUtilities.categoriesNames[1],ToolsUtilities.categoriesIcons[1],1),
-                    _categoryCard(ToolsUtilities.categoriesNames[2],ToolsUtilities.categoriesIcons[2],2),
-                    _categoryCard(ToolsUtilities.categoriesNames[3],ToolsUtilities.categoriesIcons[3],3),
-                    _categoryCard(ToolsUtilities.categoriesNames[4],ToolsUtilities.categoriesIcons[4],4),
-                    _categoryCard(ToolsUtilities.categoriesNames[5],ToolsUtilities.categoriesIcons[5],5),
+                    _categoryCard(ToolsUtilities.categoriesNames[0],ToolsUtilities.categoriesIcons[0],ToolsUtilities.categoriesNames[0],ToolsUtilities.allPageUrl[0]),
+                    _categoryCard(ToolsUtilities.categoriesNames[1],ToolsUtilities.categoriesIcons[1],ToolsUtilities.categoriesNames[1],ToolsUtilities.allPageUrl[1]),
+                    _categoryCard(ToolsUtilities.categoriesNames[2],ToolsUtilities.categoriesIcons[2],ToolsUtilities.categoriesNames[2],ToolsUtilities.allPageUrl[2]),
+                    _categoryCard(ToolsUtilities.categoriesNames[3],ToolsUtilities.categoriesIcons[3],ToolsUtilities.categoriesNames[3],ToolsUtilities.allPageUrl[3]),
+                    _categoryCard(ToolsUtilities.categoriesNames[4],ToolsUtilities.categoriesIcons[4],ToolsUtilities.categoriesNames[4],ToolsUtilities.allPageUrl[4]),
+                    _categoryCard(ToolsUtilities.categoriesNames[5],ToolsUtilities.categoriesIcons[5],ToolsUtilities.categoriesNames[5],ToolsUtilities.allPageUrl[5]),
 
                   ],
                 )
@@ -80,7 +81,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
     );
   }
 
-  Widget _categoryCard(String categoryName,IconData icon,int index) {
+  Widget _categoryCard(String categoryName,IconData icon,String index,String categoryUrl) {
     return Stack(
       
       alignment: Alignment.center,
@@ -90,7 +91,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
           width:150,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            color: (index % 2) == 0?ToolsUtilities.mainColor:ToolsUtilities.mainColor.withOpacity(0.8),
+            color: ToolsUtilities.mainColor,
 
           ),
 
@@ -100,7 +101,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => AllPostsPage()));
+                    builder: (context) => SingleCategoryPage(categoryUrl,index)));
 
           },
           child: Column(

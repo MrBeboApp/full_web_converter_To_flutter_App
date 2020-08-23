@@ -88,22 +88,16 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
               child: new TabBarView(
                 controller: _controller,
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      child: WebView(
-                        initialUrl: "https://Apple.com/",
-                        javascriptMode: JavascriptMode.unrestricted,
+                  Container(
+                    child: WebView(
+                      initialUrl: ToolsUtilities.homePageUrl,
+                      javascriptMode: JavascriptMode.unrestricted,
 
-                      ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: WebView(
-                      initialUrl: "https://www.youtube.com/c/CoodesApp/videos",
-                      javascriptMode: JavascriptMode.unrestricted,
-                    ),
+                  WebView(
+                    initialUrl: ToolsUtilities.videoPageUrl,
+                    javascriptMode: JavascriptMode.unrestricted,
                   ),
                 ],
               ),
