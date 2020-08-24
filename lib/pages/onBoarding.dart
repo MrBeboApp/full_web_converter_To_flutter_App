@@ -173,7 +173,7 @@ class _OnBoardingState extends State<OnBoarding> {
             height: 10,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: (index == currentIndex ) ? ToolsUtilities.redColor : ToolsUtilities.whiteColor,
+              color: (index == currentIndex ) ? ToolsUtilities.secondColor : ToolsUtilities.whiteColor,
 
             ),
           ),

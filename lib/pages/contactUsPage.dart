@@ -66,7 +66,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
       children: [
 
         Container(
-          height: 100,
+          height: MediaQuery.of(context).size.height * 0.2,
           decoration: BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(ToolsUtilities.contactUsHeaderImage),
@@ -79,7 +79,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
 
         //name Of our Company or Brand
         Padding(
-          padding: const EdgeInsets.only(left:8.0,top:10),
+          padding: const EdgeInsets.only(left:8.0,top:15),
           child: Text('Contact Us ',style: TextStyle(color:ToolsUtilities.mainColor,fontSize: 20,fontWeight: FontWeight.bold),textAlign:TextAlign.start,),
         ),
         Padding(

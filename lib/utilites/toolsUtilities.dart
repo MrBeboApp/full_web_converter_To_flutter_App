@@ -16,9 +16,9 @@ class ToolsUtilities {
 
  // static final mainColor = Color(0xffdc3636);
   static final whiteColor = Color(0xffffffff);
-  static final secondColor = Color(0xff1c2541);
+  static final mainColor = Color(0xff1c2541);
   static final redColor = Color(0xffdc3636);
-  static final mainColor = Color(0xffa257ba);
+  static final secondColor = Color(0xff090b10);
 
   //edit the Urls of Web Sites
   static final homePageUrl = "https://www.apple.com/watch/";
@@ -74,13 +74,12 @@ class ToolsUtilities {
  FontAwesomeIcons.video,
 
   ];
-  static String discoveryImageHeader = 'https://images.unsplash.com/photo-1532667449560-72a95c8d381b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80';
-  static String contactUsHeaderImage = 'https://images.unsplash.com/photo-1511370235399-1802cae1d32f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60';
+  static String discoveryImageHeader = 'https://images.unsplash.com/photo-1504610926078-a1611febcad3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2200&q=80';
+  static String contactUsHeaderImage = 'https://images.unsplash.com/photo-1560438718-eb61ede255eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80';
   static String infoHeaderImage = 'https://images.unsplash.com/photo-1511370235399-1802cae1d32f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60';
-  static String ourCategoriesHeaderImage = "https://images.unsplash.com/photo-1559523182-a284c3fb7cff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
+  static String ourCategoriesHeaderImage = "https://images.unsplash.com/photo-1542317854-f9596ae570f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE3MzYxfQ&auto=format&fit=crop&w=3300&q=80";
   static String visionImage = "https://images.unsplash.com/photo-1522115174737-2497162f69ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
   static String missionImage = "https://images.unsplash.com/photo-1584208124888-3a20b9c799e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
   static String infoParagraph = "Lorem ipsum, or lipsum as it is sometimes known is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown ty Malorum for use in a type specimen book. Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter: ";
-  static String integrationsInfo = "-1G cup Tata Sampann Moong Dal. \n-2G roasted and ground to fine.  \n-4.5G A pinch of powder. \n-1 cup milk. \n-1G cup sugar.  \n-7G Ghee for deep frying.   \n-3.5G cup refined flour (maida). ";
 
 }
