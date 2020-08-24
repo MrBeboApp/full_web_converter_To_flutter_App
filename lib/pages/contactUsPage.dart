@@ -74,6 +74,10 @@ class _ContactUsPageState extends State<ContactUsPage> {
           padding: const EdgeInsets.only(left:8.0,top:10),
           child: Text('Contact Us ',style: TextStyle(color:ToolsUtilities.mainColor,fontSize: 20,fontWeight: FontWeight.bold),textAlign:TextAlign.start,),
         ),
+        Padding(
+          padding: const EdgeInsets.only(left:18.0,top:10),
+          child: Text('We Are Happy To hear Your Review ',style: TextStyle(color:ToolsUtilities.secondColor,fontSize: 15),textAlign:TextAlign.start,),
+        ),
         customTextField('Enter Your Name',nameTextControl,1),
         customTextField('Enter Your Phone Number',phoneTextControl,1),
         customTextField('Enter Your Message Title',messageTitleTextControl,1),

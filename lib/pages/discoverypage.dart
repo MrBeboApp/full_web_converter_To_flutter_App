@@ -84,7 +84,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
             ),
             Container(
               color: ToolsUtilities.mainColor,
-              height: MediaQuery.of(context).size.height * 0.8,
+              height: MediaQuery.of(context).size.height * 0.9,
               child: new TabBarView(
                 controller: _controller,
                 children: <Widget>[
@@ -96,6 +96,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                     ),
                   ),
                   WebView(
+
                     initialUrl: ToolsUtilities.videoPageUrl,
                     javascriptMode: JavascriptMode.unrestricted,
                   ),

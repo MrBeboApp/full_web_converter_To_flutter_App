@@ -33,13 +33,14 @@ class SingleCategoryPageState extends State<SingleCategoryPage> {
           )
         ],
       ),
-      body: WebViewContainer(key: webViewKey),
+      body: WebViewContainer(widget.categoryUrl,key: webViewKey),
     );
   }
 }
 
 class WebViewContainer extends StatefulWidget {
-  WebViewContainer({Key key}) : super(key: key);
+  final String categoryUrl;
+  WebViewContainer(this.categoryUrl,{Key key}) : super(key: key);
 
   @override
   WebViewContainerState createState() => WebViewContainerState();
@@ -54,12 +55,13 @@ class WebViewContainerState extends State<WebViewContainer> {
       onWebViewCreated: (controller) {
         _webViewController = controller;
       },
-      initialUrl:ToolsUtilities.allPageUrl,
+      initialUrl:widget.categoryUrl,
       javascriptMode: JavascriptMode.unrestricted,
     );
   }
 
   void reloadWebView() {
     _webViewController?.reload();
+    print(widget.categoryUrl);
   }
 }

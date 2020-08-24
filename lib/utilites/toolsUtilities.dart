@@ -9,7 +9,7 @@ class ToolsUtilities {
   static final redColor = Color(0xffdc3636);
   static final mainColor = Color(0xff2b478b);
 
-  static final homePageUrl = "https://codecanyon.net/";
+  static final homePageUrl = "https://www.apple.com/watch/";
   static final videoPageUrl = "https://www.youtube.com/coodesapp";
   static final allPageUrl = "https://codecanyon.net/category/all";
   static final firstCategoryPageUrl = "https://codecanyon.net/category/mobile";
@@ -20,35 +20,13 @@ class ToolsUtilities {
   static final sixthCategoryPageUrl = "https://videohive.net/?auto_signin=true&_ga=2.212782612.104259428.1598206012-1321168733.1593072656";
 
 
-  static List imageFeaturedUrls = [
-    'https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1534596382981-1974b10d4e1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1587246574281-a18662326873?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1545576300-c7744d48aead?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-
-  ];
-
-  static List imageNewUrls = [
-    "https://images.unsplash.com/photo-1522859232762-5c42047b6675?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1570197571499-166b36435e9f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-    'https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1534596382981-1974b10d4e1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1587246574281-a18662326873?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1545576300-c7744d48aead?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    'https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-
-  ];
-
   static List categoriesNames = [
-    "Mac",
-    "Iphone",
-    "Macbook Pro",
-    "Imac",
-    "imac Pro ",
-    "Accessories ",
+    "Mobile",
+    "Scripts",
+    "Plugins",
+    "Javascript",
+    "Ecommerce ",
+    "Videohive ",
   ];
 
   static List categoriesUrls = [
@@ -63,8 +41,8 @@ class ToolsUtilities {
   ];
 
   static List categoriesIcons = [
- FontAwesomeIcons.laptopCode,
  FontAwesomeIcons.mobile,
+ FontAwesomeIcons.scribd,
  FontAwesomeIcons.laptop,
  FontAwesomeIcons.tv,
  FontAwesomeIcons.streetView,
