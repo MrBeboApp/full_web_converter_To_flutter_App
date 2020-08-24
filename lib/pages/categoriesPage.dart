@@ -1,7 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:full_web_converter/pages/allPostsPage.dart';
 import 'package:full_web_converter/pages/singleCategoryPage.dart';
 import 'package:full_web_converter/utilites/toolsUtilities.dart';
 

@@ -45,13 +45,13 @@ class ToolsUtilities {
  FontAwesomeIcons.scribd,
  FontAwesomeIcons.laptop,
  FontAwesomeIcons.tv,
- FontAwesomeIcons.streetView,
- FontAwesomeIcons.accessibleIcon,
+ FontAwesomeIcons.cartPlus,
+ FontAwesomeIcons.video,
   ];
   static String discoveryImageHeader = 'https://images.unsplash.com/photo-1532667449560-72a95c8d381b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80';
   static String contactUsHeaderImage = 'https://images.unsplash.com/photo-1511370235399-1802cae1d32f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60';
   static String infoHeaderImage = 'https://images.unsplash.com/photo-1511370235399-1802cae1d32f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60';
-  static String ourCategoriesHeaderImage = "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
+  static String ourCategoriesHeaderImage = "https://images.unsplash.com/photo-1577482868217-681dbc6e9cc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2752&q=80";
   static String visionImage = "https://images.unsplash.com/photo-1522115174737-2497162f69ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
   static String missionImage = "https://images.unsplash.com/photo-1584208124888-3a20b9c799e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
   static String infoParagraph = "Lorem ipsum, or lipsum as it is sometimes known is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown ty Malorum for use in a type specimen book. Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter: ";

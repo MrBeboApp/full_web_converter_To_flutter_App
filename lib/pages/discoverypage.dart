@@ -1,10 +1,9 @@
-import 'dart:async';
 
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:full_web_converter/utilites/toolsUtilities.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-final Completer<WebViewController> _webViewcontroller = Completer<WebViewController>();
 
 class DiscoveryPage extends StatefulWidget {
   @override
@@ -12,6 +11,20 @@ class DiscoveryPage extends StatefulWidget {
 }
 class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProviderStateMixin  {
   TabController _controller;
+
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
+
+  void getMessage(){
+    _firebaseMessaging.configure(
+        onMessage: (Map<String, dynamic> message) async {
+          print('on message $message');
+        }, onResume: (Map<String, dynamic> message) async {
+      print('on resume $message');
+    }, onLaunch: (Map<String, dynamic> message) async {
+      print('on launch $message');
+    });
+  }
+
 
 
   @override

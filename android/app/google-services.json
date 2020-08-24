@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "75793384712",
+    "firebase_url": "https://full-webconverter.firebaseio.com",
+    "project_id": "full-webconverter",
+    "storage_bucket": "full-webconverter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75793384712:android:04022e704540ef4443d8bd",
+        "android_client_info": {
+          "package_name": "com.mrbebo.full_web_converter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "75793384712-f9e4s9fkpjff7rhh705h9ggdid3dtp1s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTJuZOdgWrTXnVm_FJWScsk83CujOqrHg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "75793384712-f9e4s9fkpjff7rhh705h9ggdid3dtp1s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

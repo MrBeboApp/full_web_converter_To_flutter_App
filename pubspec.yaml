@@ -31,6 +31,8 @@ dependencies:
   curved_navigation_bar: ^0.3.3
   font_awesome_flutter: ^8.8.1
   webview_flutter: ^0.3.22+1
+  firebase_messaging: ^7.0.0
+  shared_preferences: ^0.5.10
 
 
 

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:full_web_converter/main.dart';
 import 'package:full_web_converter/pages/starterPage.dart';
 import 'package:full_web_converter/utilites/onBoardingModel.dart';
 import 'package:full_web_converter/utilites/toolsUtilities.dart';
+
 
 
 
@@ -80,14 +82,15 @@ class _OnBoardingState extends State<OnBoarding> {
                         elevation: 0,
                         child: _reachatend ? InkWell(
                             onTap: (){
-                              print(_reachatend);
+                              _updateSeen();
+
                               Navigator. pushReplacement(context, MaterialPageRoute(
                                   builder: (context) => StarterPage()));
 
                             },
                             child: Text('Start',style: TextStyle(color: ToolsUtilities.whiteColor,fontSize: 18),)) :InkWell(
                             onTap: (){
-                              print(_reachatend);
+                              _updateSeen();
                               Navigator. pushReplacement(context, MaterialPageRoute(
                                   builder: (context) => StarterPage()));
                             },
@@ -180,5 +183,11 @@ class _OnBoardingState extends State<OnBoarding> {
     }
     return widgets;
   }
+
+  void _updateSeen(){
+    pref.setBool('seen', true);
+
+  }
+
 
 }
