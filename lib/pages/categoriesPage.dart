@@ -91,7 +91,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
         children: [
           Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight: Radius.circular(30)),
                 gradient: LinearGradient(
                     begin: Alignment.topRight,
                     end: Alignment.bottomLeft,
