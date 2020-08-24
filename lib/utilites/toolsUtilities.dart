@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ToolsUtilities {
 
@@ -9,6 +10,7 @@ class ToolsUtilities {
   static final redColor = Color(0xffdc3636);
   static final mainColor = Color(0xff2b478b);
 
+  //edit the Urls of Web Sites
   static final homePageUrl = "https://www.apple.com/watch/";
   static final videoPageUrl = "https://www.youtube.com/coodesapp";
   static final allPageUrl = "https://codecanyon.net/category/all";
@@ -19,7 +21,23 @@ class ToolsUtilities {
   static final fifthCategoryPageUrl = "https://codecanyon.net/category/wordpress/ecommerce/woocommerce";
   static final sixthCategoryPageUrl = "https://videohive.net/?auto_signin=true&_ga=2.212782612.104259428.1598206012-1321168733.1593072656";
 
+  //edit the social media Links
+  static final facebookUrl = "https://www.facebook.com/";
+  static final twitterUrl = "https://twitter.com/home";
+  static final instagramUrl = "https://www.instagram.com/";
+  static final snapchatUrl = "https://ads.snapchat.com/";
+  static final websiteUrl = "https://coodes.org/";
+  static final pintrestUrl = "https://www.pinterest.com/homefeed/";
+  static final youtubeUrl = "https://www.youtube.com/";
 
+  //The Url Function that open any Url
+  void customURlLaunch(command) async {
+    if (await canLaunch(command)) {
+      await launch(command);
+    } else {
+      print('could not launch $command');
+    }
+  }
   static List categoriesNames = [
     "Mobile",
     "Scripts",
@@ -47,6 +65,7 @@ class ToolsUtilities {
  FontAwesomeIcons.tv,
  FontAwesomeIcons.cartPlus,
  FontAwesomeIcons.video,
+
   ];
   static String discoveryImageHeader = 'https://images.unsplash.com/photo-1532667449560-72a95c8d381b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80';
   static String contactUsHeaderImage = 'https://images.unsplash.com/photo-1511370235399-1802cae1d32f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60';

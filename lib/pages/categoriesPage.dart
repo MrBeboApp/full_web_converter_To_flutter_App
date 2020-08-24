@@ -48,25 +48,28 @@ class _CategoriesPageState extends State<CategoriesPage> {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 180),
+            padding: const EdgeInsets.only(top: 200),
             child: Padding(
-              padding: const EdgeInsets.only(right: 10,left: 10),
+              padding: const EdgeInsets.only(right: 10,left: 10,),
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(topRight: Radius.circular(10),topLeft: Radius.circular(10)),
                   color: ToolsUtilities.whiteColor
 
                 ),
-                child: GridView.count(crossAxisCount: 2,
+                child: GridView.count(crossAxisCount: 3,
                 shrinkWrap: true,
                   children: [
-                    _categoryCard(ToolsUtilities.categoriesNames[0],ToolsUtilities.categoriesIcons[0],ToolsUtilities.categoriesNames[0],ToolsUtilities.categoriesUrls[0]),
-                    _categoryCard(ToolsUtilities.categoriesNames[1],ToolsUtilities.categoriesIcons[1],ToolsUtilities.categoriesNames[1],ToolsUtilities.categoriesUrls[1]),
-                    _categoryCard(ToolsUtilities.categoriesNames[2],ToolsUtilities.categoriesIcons[2],ToolsUtilities.categoriesNames[2],ToolsUtilities.categoriesUrls[2]),
-                    _categoryCard(ToolsUtilities.categoriesNames[3],ToolsUtilities.categoriesIcons[3],ToolsUtilities.categoriesNames[3],ToolsUtilities.categoriesUrls[3]),
-                    _categoryCard(ToolsUtilities.categoriesNames[4],ToolsUtilities.categoriesIcons[4],ToolsUtilities.categoriesNames[4],ToolsUtilities.categoriesUrls[4]),
-                    _categoryCard(ToolsUtilities.categoriesNames[5],ToolsUtilities.categoriesIcons[5],ToolsUtilities.categoriesNames[5],ToolsUtilities.categoriesUrls[5]),
+                    _categoryCard(ToolsUtilities.categoriesNames[0],ToolsUtilities.categoriesIcons[0],ToolsUtilities.categoriesNames[0],ToolsUtilities.categoriesUrls[0],0),
+                    _categoryCard(ToolsUtilities.categoriesNames[1],ToolsUtilities.categoriesIcons[1],ToolsUtilities.categoriesNames[1],ToolsUtilities.categoriesUrls[1],1),
+                    _categoryCard(ToolsUtilities.categoriesNames[2],ToolsUtilities.categoriesIcons[2],ToolsUtilities.categoriesNames[2],ToolsUtilities.categoriesUrls[2],2),
+                    _categoryCard(ToolsUtilities.categoriesNames[3],ToolsUtilities.categoriesIcons[3],ToolsUtilities.categoriesNames[3],ToolsUtilities.categoriesUrls[3],3),
+                    _categoryCard(ToolsUtilities.categoriesNames[4],ToolsUtilities.categoriesIcons[4],ToolsUtilities.categoriesNames[4],ToolsUtilities.categoriesUrls[4],4),
+                    _categoryCard(ToolsUtilities.categoriesNames[5],ToolsUtilities.categoriesIcons[5],ToolsUtilities.categoriesNames[5],ToolsUtilities.categoriesUrls[5],5),
 
+                    _categoryCard(ToolsUtilities.categoriesNames[0],ToolsUtilities.categoriesIcons[3],ToolsUtilities.categoriesNames[0],ToolsUtilities.categoriesUrls[3],0),
+                    _categoryCard(ToolsUtilities.categoriesNames[1],ToolsUtilities.categoriesIcons[1],ToolsUtilities.categoriesNames[1],ToolsUtilities.categoriesUrls[4],1),
+                    _categoryCard(ToolsUtilities.categoriesNames[2],ToolsUtilities.categoriesIcons[0],ToolsUtilities.categoriesNames[3],ToolsUtilities.categoriesUrls[1],2),
                   ],
                 )
               ),
@@ -79,47 +82,50 @@ class _CategoriesPageState extends State<CategoriesPage> {
     );
   }
 
-  Widget _categoryCard(String categoryName,IconData icon,String index,String categoryUrl) {
-    return Stack(
-      
-      alignment: Alignment.center,
-      children: [
-        Container(
-          height: 150,
-          width:150,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: ToolsUtilities.secondColor,
+  Widget _categoryCard(String categoryName,IconData icon,String indexCategory,String categoryUrl,int index) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Stack(
+
+        alignment: Alignment.center,
+        children: [
+          Container(
+            height: 150,
+            width:150,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: (index %2 == 0)?ToolsUtilities.secondColor:ToolsUtilities.mainColor,
+
+            ),
 
           ),
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => SingleCategoryPage(categoryUrl,indexCategory)));
 
-        ),
-        InkWell(
-          onTap: (){
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => SingleCategoryPage(categoryUrl,index)));
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(icon,color: ToolsUtilities.whiteColor,size: 60,),
+                SizedBox(height: 10,),
+                Text(
+                  categoryName,
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: ToolsUtilities.whiteColor,
+                      fontWeight: FontWeight.bold),
+                ),
 
-          },
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Icon(icon,color: ToolsUtilities.whiteColor,size: 60,),
-              SizedBox(height: 10,),
-              Text(
-                categoryName,
-                style: TextStyle(
-                    fontSize: 15,
-                    color: ToolsUtilities.whiteColor,
-                    fontWeight: FontWeight.bold),
-              ),
-
-            ],
-          ),
-        )
-      ],
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
