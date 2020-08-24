@@ -42,7 +42,7 @@ class _AboutUsState extends State<AboutUs> {
                   child: Center(
                     child: Padding(
                       padding: const EdgeInsets.only(top: 100.0, right: 10, left: 10),
-                      child:Text("About Our Wooo Watches ",style: TextStyle(color: ToolsUtilities.whiteColor,fontWeight: FontWeight.bold,fontSize: 30),),
+                      child:Text("About Our Watches ",style: TextStyle(color: ToolsUtilities.whiteColor,fontWeight: FontWeight.bold,fontSize: 30),),
                     ),
                   ),
                 ),
@@ -63,13 +63,44 @@ class _AboutUsState extends State<AboutUs> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Icon(FontAwesomeIcons.facebook,color: ToolsUtilities.secondColor,),
-                        Icon(FontAwesomeIcons.twitter,color: ToolsUtilities.secondColor,),
-                        Icon(FontAwesomeIcons.instagram,color: ToolsUtilities.secondColor,),
-                        Icon(FontAwesomeIcons.pinterest,color: ToolsUtilities.secondColor,),
-                        Icon(FontAwesomeIcons.youtube,color: ToolsUtilities.secondColor,),
-                        Icon(FontAwesomeIcons.globe,color: ToolsUtilities.secondColor,),
-                        Icon(FontAwesomeIcons.snapchat,color: ToolsUtilities.secondColor,),
+                        InkWell(
+                          onTap:(){
+                            customURlLaunch(ToolsUtilities.facebookUrl);
+                          },
+                            child: Icon(FontAwesomeIcons.facebook,color: ToolsUtilities.secondColor,)),
+                        InkWell(
+                          onTap:(){
+                            customURlLaunch(ToolsUtilities.twitterUrl);
+                          },
+                            child: Icon(FontAwesomeIcons.twitter,color: ToolsUtilities.secondColor,)),
+                        InkWell(
+                            onTap:(){
+                              customURlLaunch(ToolsUtilities.youtubeUrl);
+                            },
+                            child: Icon(FontAwesomeIcons.youtube,color: ToolsUtilities.secondColor,)),
+                        InkWell(
+                            onTap:(){
+                              customURlLaunch(ToolsUtilities.snapchatUrl);
+                            },
+                            child: Icon(FontAwesomeIcons.snapchat,color: ToolsUtilities.secondColor,)),
+
+                        InkWell(
+                            onTap:(){
+                              customURlLaunch(ToolsUtilities.instagramUrl);
+                            },
+                            child: Icon(FontAwesomeIcons.instagram,color: ToolsUtilities.secondColor,)),
+                        InkWell(
+                            onTap:(){
+                              customURlLaunch(ToolsUtilities.pintrestUrl);
+                            },
+                            child: Icon(FontAwesomeIcons.pinterest,color: ToolsUtilities.secondColor,)),
+                        InkWell(
+                            onTap:(){
+                              customURlLaunch(ToolsUtilities.websiteUrl);
+                            },
+                            child: Icon(FontAwesomeIcons.globe,color: ToolsUtilities.secondColor,)),
+
+
 
                       ],
                     ),

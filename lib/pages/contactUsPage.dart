@@ -14,6 +14,15 @@ class _ContactUsPageState extends State<ContactUsPage> {
   TextEditingController contentTextControl= TextEditingController();
 
   @override
+  void dispose() {
+    nameTextControl.dispose();
+    phoneTextControl.dispose();
+    messageTitleTextControl.dispose();
+    contentTextControl.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ToolsUtilities.whiteColor,
@@ -91,6 +100,19 @@ class _ContactUsPageState extends State<ContactUsPage> {
               color: ToolsUtilities.mainColor,
               elevation: 5,
               child: FlatButton.icon(onPressed: (){
+
+                //Call Us via email
+                var myEmail = ToolsUtilities.email;
+                String subject = messageTitleTextControl.text;
+                String body = "My Name is :" + nameTextControl.text + "\n " + " My Phone Number is: " + phoneTextControl.text + "\n " + contentTextControl.text;
+                String mailUrl = Uri.encodeFull('mailto:$myEmail?subject=$subject&body=$body');
+                customURlLaunch(mailUrl);
+
+                nameTextControl.text = '';
+                phoneTextControl.text = '';
+                messageTitleTextControl.text = '';
+                contentTextControl.text = '';
+
 
 
               }, icon: Icon(Icons.email,color: ToolsUtilities.whiteColor,), label: Text('Send Via Email',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: ToolsUtilities.whiteColor),)),

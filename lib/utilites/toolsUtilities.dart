@@ -2,13 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+
+
+void  customURlLaunch(command) async {
+  if (await canLaunch(command)) {
+    await launch(command);
+  } else {
+    print('could not launch $command');
+  }
+}
+
 class ToolsUtilities {
 
  // static final mainColor = Color(0xffdc3636);
   static final whiteColor = Color(0xffffffff);
-  static final secondColor = Color(0xff463e46);
+  static final secondColor = Color(0xff1c2541);
   static final redColor = Color(0xffdc3636);
-  static final mainColor = Color(0xff2b478b);
+  static final mainColor = Color(0xffa257ba);
 
   //edit the Urls of Web Sites
   static final homePageUrl = "https://www.apple.com/watch/";
@@ -30,14 +40,11 @@ class ToolsUtilities {
   static final pintrestUrl = "https://www.pinterest.com/homefeed/";
   static final youtubeUrl = "https://www.youtube.com/";
 
+//Add your Email
+  static final email = "info@coodes.org";
+
   //The Url Function that open any Url
-  void customURlLaunch(command) async {
-    if (await canLaunch(command)) {
-      await launch(command);
-    } else {
-      print('could not launch $command');
-    }
-  }
+
   static List categoriesNames = [
     "Mobile",
     "Scripts",

@@ -77,7 +77,12 @@ class _DiscoveryPageState extends State<DiscoveryPage> with TickerProviderStateM
           ),
         ),
         Container(
-          decoration:  BoxDecoration(color: ToolsUtilities.mainColor),
+          decoration:  BoxDecoration(
+              gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [ToolsUtilities.mainColor, ToolsUtilities.secondColor])
+          ),
 
           child:  TabBar(
             indicatorColor: ToolsUtilities.whiteColor,
@@ -96,7 +101,8 @@ class _DiscoveryPageState extends State<DiscoveryPage> with TickerProviderStateM
         ),
         Expanded(
           child: Container(
-            color: ToolsUtilities.mainColor,
+
+            color: ToolsUtilities.whiteColor,
             height: MediaQuery.of(context).size.height * 0.9,
             child: new TabBarView(
               controller: _controller,

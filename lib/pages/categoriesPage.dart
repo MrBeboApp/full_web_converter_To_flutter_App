@@ -90,15 +90,16 @@ class _CategoriesPageState extends State<CategoriesPage> {
         alignment: Alignment.center,
         children: [
           Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [ToolsUtilities.mainColor, ToolsUtilities.secondColor])),
             height: 150,
             width:150,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: (index %2 == 0)?ToolsUtilities.secondColor:ToolsUtilities.mainColor,
 
             ),
-
-          ),
           InkWell(
             onTap: (){
               Navigator.push(
