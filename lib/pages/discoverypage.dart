@@ -142,8 +142,8 @@ class _DiscoveryPageState extends State<DiscoveryPage> with TickerProviderStateM
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
 
-          Text('Daily New Watches',style: TextStyle(fontSize: 15,color: ToolsUtilities.whiteColor,)),
-          Text('Discovery',style: TextStyle(fontSize: 30,color: ToolsUtilities.whiteColor,fontWeight: FontWeight.bold),),
+          Text('Daily New Stories',style: TextStyle(fontSize: 15,color: ToolsUtilities.whiteColor,)),
+          Text('Discovery Now',style: TextStyle(fontSize: 30,color: ToolsUtilities.whiteColor,fontWeight: FontWeight.bold),),
 
       ],
       ),

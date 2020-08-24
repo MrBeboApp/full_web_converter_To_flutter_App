@@ -36,7 +36,7 @@ class _StarterPageState extends State<StarterPage> {
           Icon(Icons.info,color: ToolsUtilities.whiteColor, size: 20),
           Icon(Icons.calendar_view_day,color: ToolsUtilities.whiteColor, size: 20),
           Icon(Icons.whatshot,color: ToolsUtilities.whiteColor, size: 20),
-          Icon(Icons.layers,color: ToolsUtilities.whiteColor, size: 20),
+          Icon(Icons.list,color: ToolsUtilities.whiteColor, size: 20),
           Icon(Icons.email,color: ToolsUtilities.whiteColor, size: 20),
         ],
         color: ToolsUtilities.mainColor,

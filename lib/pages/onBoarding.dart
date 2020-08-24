@@ -9,7 +9,7 @@ import 'package:full_web_converter/utilites/toolsUtilities.dart';
 
 
 List<OnBoardingModel> dataUtilits = [
-  OnBoardingModel('All content will show from web as App','assets/images/2.png'),
+  OnBoardingModel('All content will Appare from web as App','assets/images/2.png'),
   OnBoardingModel('Convert any website to app for ios and android','assets/images/1.png'),
   OnBoardingModel('Any Website Update will show immediately ','assets/images/3.png'),
 

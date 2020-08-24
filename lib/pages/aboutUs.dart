@@ -150,7 +150,7 @@ class _AboutUsState extends State<AboutUs> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(ToolsUtilities.infoParagraph,style: TextStyle(color:ToolsUtilities.secondColor,fontSize: 15,),textAlign: TextAlign.justify,
+                  child: Text(ToolsUtilities.infoParagraphVision,style: TextStyle(color:ToolsUtilities.secondColor,fontSize: 15,),textAlign: TextAlign.justify,
                   ),
                 ),
               ],
@@ -182,7 +182,7 @@ class _AboutUsState extends State<AboutUs> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(ToolsUtilities.infoParagraph,style: TextStyle(color:ToolsUtilities.secondColor,fontSize: 15,),textAlign: TextAlign.justify,
+                  child: Text(ToolsUtilities.infoParagraphMission,style: TextStyle(color:ToolsUtilities.secondColor,fontSize: 15,),textAlign: TextAlign.justify,
                   ),
                 ),
 
