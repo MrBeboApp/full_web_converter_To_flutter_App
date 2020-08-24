@@ -89,7 +89,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
           width:150,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            color: ToolsUtilities.mainColor,
+            color: ToolsUtilities.secondColor,
 
           ),
 

@@ -10,6 +10,19 @@ class AllPostsPage extends StatefulWidget {
 }
 
 class AllPostsPageState extends State<AllPostsPage> {
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    setState(() {
+
+        isLoading = false;
+
+
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
 
